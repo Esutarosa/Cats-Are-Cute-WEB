@@ -89,13 +89,13 @@ const sendEmail = (e) => {
         emailjs.sendForm(serviceID, templateID, templateParams, publicKey)
             .then(() => {
                 contactMessage.classList.add('color-green')
-                contactMessage.textContent = 'You registered successfully'
+                contactMessage.textContent = 'Your message has been sent successfully'
 
                 setTimeout(() => {
                     contactMessage.textContent = ''
                 }, 3000)
             }, (error) => {
-                alert('OOPS! SOMETHING HAS FAILED...', error)
+                alert('OOPS! SOMETHING HAS WRONG...', error)
             })
             
         contactUser.value = ''
